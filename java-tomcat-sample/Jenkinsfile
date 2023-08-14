@@ -14,10 +14,10 @@ pipeline {
                 }
             }
         }
-        stage('Deply to Staging'){
+        stage('Deply to Staging') {
             steps {
                 echo "We are going to deploy to staging server"
-                Build job: 'deploy-tomcat-staging'
+                build job: 'deploy-tomcat-staging'
             }
         }
 }
