@@ -13,8 +13,12 @@ pipeline {
                     archiveArtifacts artifacts: '**/*.war'
                 }
             }
-
-
-    }
+        }
+        stage ('Deply to Staging'){
+            steps{
+                echo "We are going to deploy to staging server"
+                Build job: 'deploy-tomcat-staging'
+            }
+        }
 }
 }
